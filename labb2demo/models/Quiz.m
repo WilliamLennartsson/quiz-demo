@@ -23,12 +23,19 @@
 }
 
 - (NSArray *)shuffleAnswers {
+    // Array with all answers
     NSMutableArray *shuffledArray = [NSMutableArray arrayWithObjects:self.correctAnswer, self.wrongAnswer1, self.wrongAnswer2, self.wrongAnswer3, nil];
     for (int i = 0; i < 4; i++) {
-        int randomIndex = arc4random_uniform(4);
+        // RandomIndex based on count of answers
+        int randomIndex = arc4random_uniform([shuffledArray count]);
         if (i != randomIndex) {
+            // Store arr[i] in temp
             NSString *temp = shuffledArray[i];
+            // arr[i] = arr[randomI]
+            // Temp is used to not lose the value at arr[i]
+            // At this point arr[i] === arr[randomI]
             shuffledArray[i] = shuffledArray[randomIndex];
+            // arr[randomI] = temp.
             shuffledArray[randomIndex] = temp;
         }
     }

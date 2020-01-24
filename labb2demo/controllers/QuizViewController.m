@@ -23,9 +23,8 @@
     [super viewDidLoad];
     self.handler = [[QuizHandler alloc] init];
     // Quiz *q = self.handler.questions[0];
-    Quiz *q = [self.handler newQuiz];
-    // NSLog(@"%@", q.question);
-    [self updateUI:q];
+    // Uppdatera UI // New quiz
+    [self updateUI: [self.handler newQuiz]];
 }
 
 // Update UI

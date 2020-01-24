@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 // rätt svar
 @property (nonatomic) NSString *correctAnswer;
 
+// Init med parametrar
 - (instancetype) initWithQuestion: (NSString*)question correctAnswer: (NSString*)correctAnswer
     wrongAnswer1: (NSString*)wrongAnswer1
     wrongAnswer2: (NSString*)wrongAnswer2
