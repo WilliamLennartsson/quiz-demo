@@ -20,6 +20,10 @@
 
 @implementation QuizViewController
 
+// TODO: rightOrWrongLabel hidden and working
+// TODO: 5 frågor sen game over
+// TODO: Visa score
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.handler = [[QuizHandler alloc] init];
@@ -30,11 +34,15 @@
 
 // Update UI
 - (void) updateUI: (Quiz*)quiz {
+    // Update questionLabel text
+    self.questionLabel.text = quiz.question;
+    // Get shuffled answers from quiz
     NSArray *answers = [quiz shuffleAnswers];
+    // Loop through buttons
     for (int i = 0; i < 4; i++){
+        // set title of button to a random answer
         [self.answerButtons[i] setTitle: answers[i] forState:UIControlStateNormal];
     }
-    self.questionLabel.text = quiz.question;
 }
 
 - (IBAction)guessBtnPressed:(id)sender {
@@ -63,10 +71,6 @@
         [self updateUI: [self.handler newQuiz]];
     }
 }
-
-// TODO: rightOrWrongLabel hidden and working
-// TODO: 5 frågor sen game over
-// TODO: Visa score
 
 /*
 #pragma mark - Navigation
