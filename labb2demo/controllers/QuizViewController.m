@@ -12,8 +12,9 @@
 @interface QuizViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rightOrWrongLabel;
+// All buttons stored in a collection to avoid copy paste
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *answerButtons;
-
+// QuizHandler property to use all throughout the viewController
 @property (nonatomic) QuizHandler *handler;
 @end
 
@@ -37,9 +38,13 @@
 }
 
 - (IBAction)guessBtnPressed:(id)sender {
+    // Check if sender is a button
     if ([sender isKindOfClass:[UIButton class]]){
+        // typecast sender to UIButton
         UIButton *button = (UIButton*)sender;
+        // Get guess from the button title
         NSString *guess = button.titleLabel.text;
+        // Check if the answer is correct
         if ([self.handler rightOrWrongGuess: guess]) {
             // Correct guess
             // poäng ++
