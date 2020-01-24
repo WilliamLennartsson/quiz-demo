@@ -16,6 +16,9 @@
 		783761A323DADE3800D0427D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 783761A223DADE3800D0427D /* main.m */; };
 		783761AD23DADE3800D0427D /* labb2demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 783761AC23DADE3800D0427D /* labb2demoTests.m */; };
 		783761B823DADE3800D0427D /* labb2demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 783761B723DADE3800D0427D /* labb2demoUITests.m */; };
+		7856979023DAE4BC00E2CC3A /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7856978F23DAE4BC00E2CC3A /* QuizViewController.m */; };
+		7856979423DAE64300E2CC3A /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 7856979323DAE64300E2CC3A /* Quiz.m */; };
+		7856979723DAE95800E2CC3A /* QuizHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7856979623DAE95800E2CC3A /* QuizHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,12 @@
 		783761B323DADE3800D0427D /* labb2demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = labb2demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		783761B723DADE3800D0427D /* labb2demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = labb2demoUITests.m; sourceTree = "<group>"; };
 		783761B923DADE3800D0427D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7856978E23DAE4BC00E2CC3A /* QuizViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
+		7856978F23DAE4BC00E2CC3A /* QuizViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
+		7856979223DAE64300E2CC3A /* Quiz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
+		7856979323DAE64300E2CC3A /* Quiz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
+		7856979523DAE95800E2CC3A /* QuizHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizHandler.h; sourceTree = "<group>"; };
+		7856979623DAE95800E2CC3A /* QuizHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +113,12 @@
 		7837618F23DADE3500D0427D /* labb2demo */ = {
 			isa = PBXGroup;
 			children = (
+				7856979123DAE61B00E2CC3A /* models */,
+				783761C823DAE2EE00D0427D /* controllers */,
 				7837619023DADE3500D0427D /* AppDelegate.h */,
 				7837619123DADE3500D0427D /* AppDelegate.m */,
 				7837619323DADE3500D0427D /* SceneDelegate.h */,
 				7837619423DADE3500D0427D /* SceneDelegate.m */,
-				7837619623DADE3500D0427D /* ViewController.h */,
-				7837619723DADE3500D0427D /* ViewController.m */,
 				7837619923DADE3500D0427D /* Main.storyboard */,
 				7837619C23DADE3800D0427D /* Assets.xcassets */,
 				7837619E23DADE3800D0427D /* LaunchScreen.storyboard */,
@@ -135,6 +144,28 @@
 				783761B923DADE3800D0427D /* Info.plist */,
 			);
 			path = labb2demoUITests;
+			sourceTree = "<group>";
+		};
+		783761C823DAE2EE00D0427D /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7837619623DADE3500D0427D /* ViewController.h */,
+				7837619723DADE3500D0427D /* ViewController.m */,
+				7856978E23DAE4BC00E2CC3A /* QuizViewController.h */,
+				7856978F23DAE4BC00E2CC3A /* QuizViewController.m */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		7856979123DAE61B00E2CC3A /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7856979223DAE64300E2CC3A /* Quiz.h */,
+				7856979323DAE64300E2CC3A /* Quiz.m */,
+				7856979523DAE95800E2CC3A /* QuizHandler.h */,
+				7856979623DAE95800E2CC3A /* QuizHandler.m */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +299,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7837619823DADE3500D0427D /* ViewController.m in Sources */,
+				7856979023DAE4BC00E2CC3A /* QuizViewController.m in Sources */,
+				7856979723DAE95800E2CC3A /* QuizHandler.m in Sources */,
 				7837619223DADE3500D0427D /* AppDelegate.m in Sources */,
 				783761A323DADE3800D0427D /* main.m in Sources */,
+				7856979423DAE64300E2CC3A /* Quiz.m in Sources */,
 				7837619523DADE3500D0427D /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
